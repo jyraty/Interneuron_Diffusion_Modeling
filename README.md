@@ -1,5 +1,5 @@
 # V1
-#################################################################
+--------------------------------------------------------------------------------------
 This python code performs simulation of interneurons in 2D.
 Interneurons are modelled as chains, eventually branched, of nodes connected by springs. So far level 2 and level 3 branches are implemented.
 Leading and tailing processes are allowed to perform random jumps. Jump acceptance probability obeys a Boltzmann-like distribution based on the local value of pre-defined 2D affinity fields and a 'temperature' value.
@@ -12,7 +12,8 @@ The code uses numba parallelism by default and is limited to 400 interneuron sur
 
 Runing the codes requires the following libraries to be available in the python3 environment :
 numba, numpy, opencv, imageio.v2, pathlib, time, tkinter, matplotlib, threading
-###########################################################################################
+---------------------------------------------------------------------------------------
+
 Running the codes requires the presence of the following files in the runtime directory :
 A) for the BRAIN mask:
 Brain_only_BW.png
@@ -51,10 +52,14 @@ B)'STOPS' interrupts the calculation and finalizes the output of the video 'simu
   after a 'STOP' instruction: 'STARTS can be used to restart the calculation (with apparition of IN surrogates as defined in the 'batch' keyword, but with theiur lat position as starting point)
                               the trajectory file is updated
                               a new 'simulation_xxx.mp4' file is created
-#####################################################################
-several post-processing are given.
-####################################################################
-                              
+
 
 If several 'simulation, simulation1 simulation2 ' etc... files have been produced during a single simulation, these can be collated in a single long mp4 file using the concatenate.py script. This requires installation of the ffmpeg plugin.
 C) 'Field to plot' allows to toggle between the various fileds of the simulation. Post relevant are 'potential' and 'affinity' fields.
+
+----------------------------------------------------------------------
+
+several post-processing are given.
+---------------------------------------------------------------------
+
+                              
