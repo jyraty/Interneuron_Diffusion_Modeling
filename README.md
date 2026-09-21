@@ -16,6 +16,7 @@ numba, numpy, opencv, imageio.v2, pathlib, time, tkinter, matplotlib, threading
 ---------------------------------------------------------------------------------------
 
 Running the codes requires the presence of the following files in the runtime directory :
+
 A) for the BRAIN mask:
 Brain_only_BW.png
 Full_black.png
@@ -48,15 +49,19 @@ At startup, the code reads the 'default_data.txt' file, hopefully producing an e
 Frequent error occurs when a blank line is found (do not leave blank lines ...)
 
 Two graphic windows open. One with the simulation 2D box, and one with some options menu. 
+
 A)'START' does as it says
+
 B)'STOPS' interrupts the calculation and finalizes the output of the video 'simulation_xxx.mp4' file. This file is not readable is the calculations stops abruptly or is cancelled by some other action.
-  after a 'STOP' instruction: 'STARTS can be used to restart the calculation (with apparition of IN surrogates as defined in the 'batch' keyword, but with theiur lat position as starting point)
-                              the trajectory file is updated
-                              a new 'simulation_xxx.mp4' file is created
+  after a 'STOP' instruction: 
+    'STARTS can be used to restart the calculation (with apparition of IN surrogates as defined in the 'batch' keyword, but with theiur lat position as starting point)
+    the trajectory file is updated
+    a new 'simulation_xxx.mp4' file is created
 
 
 If several 'simulation, simulation1 simulation2 ' etc... files have been produced during a single simulation, these can be collated in a single long mp4 file using the concatenate.py script. This requires installation of the ffmpeg plugin.
-C) 'Field to plot' allows to toggle between the various fileds of the simulation. Post relevant are 'potential' and 'affinity' fields.
+
+C) 'Field to plot' allows to toggle between the various fields of the simulation. Post relevant are 'potential' and 'affinity' fields.
 
 ----------------------------------------------------------------------
 
