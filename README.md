@@ -3,7 +3,7 @@
 
 This python code performs simulation of interneurons in 2D.
 Interneurons are modelled as chains, eventually branched, of nodes connected by springs. So far level 2 and level 3 branches are implemented.
-Leading and tailing processes are allowed to perform random jumps. Jump acceptance probability obeys a Boltzmann-like distribution based on the local value of pre-defined 2D affinity fields and a 'temperature' value.
+Leading and tailing processes are allowed to perform random jumps. Jump acceptance probability obeys a Boltzmann-like distribution based on the local value of pre-defined 2D affinity field and a 'temperature' value.
 Jumps introduce kinetic energy in the system, which is equilibrated thanks to the integration of Newton's equation of moment together with a friction coefficient.
 The geometry of the confining universe is defined by MASKS.
 With this project, 3 different masking geometries are given: BRAIN, SLICE and CORTEX.
