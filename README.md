@@ -9,7 +9,6 @@ With this project, 3 different masking geometries are given: BRAIN, SLICE and CO
 The parameters are provided for 3 different sets of parameters : HUMAN (H42), MOUSE (M43) and Mouse+Gain of function (GOF4).
 Parameters are provided as is. It is not advised to modify the proposed default values.
 The code uses numba parallelism by default and is limited to 400 interneuron surrogates.
-
 Runing the codes requires the following libraries to be available in the python3 environment :
 numba, numpy, opencv, imageio.v2, pathlib, time, tkinter, matplotlib, threading
 ---------------------------------------------------------------------------------------
