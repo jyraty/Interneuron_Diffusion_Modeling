@@ -416,7 +416,7 @@ def add_mask(field, mask_type, mask_file, mask_shape, mask_params, box_nx, box_n
             y = np.linspace(0, box_ny, box_ny)
             X, Y = np.meshgrid(x, y)
             if (mask_shape=='Multiline_Cortex'):
-                filename="multiline_affinity_59pts_cortex_v9-800x700.txt"
+                filename="multiline_affinity_60pts_cortex_v12-528x463.txt"
             if (mask_shape=='Multiline_Brain'):
                 filename="multiline_affinity_139pts_full_v12-800x1200.txt"
             if (mask_shape=='Multiline_Slice'):

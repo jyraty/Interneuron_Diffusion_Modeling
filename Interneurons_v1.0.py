@@ -1150,11 +1150,6 @@ def main():
     ##    canvas.draw()
 
     
-
-    btn = tk.Button(root, text="replot", command=lambda: mytk.erase_and_replot_neuron(n_neurons, n_tails, n_levels, fig, ax,canvas, neurons,box_nx,box_ny,box_xf, shapes,\
-                                neurons_tail_ntot,neurons_x,neurons_y, neurons_size,neurons_bulge_active,\
-                                neurons_bulge_size, neurons_tail_active,neurons_tail_node, neurons_tail_level, win_visible))
-    btn.pack(pady=10)
     btn2 =  tk.Button(root, text="Start Sim", command=lambda:start(root2,fig,ax,canvas,stop_event, win_visible))
     btn2.pack(pady=10)
     btn3 =  tk.Button(root, text="Stop Sim", command=lambda:stop_event.set())
