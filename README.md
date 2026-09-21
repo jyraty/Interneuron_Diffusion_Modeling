@@ -66,7 +66,14 @@ C) 'Field to plot' allows to toggle between the various fields of the simulation
 ----------------------------------------------------------------------
 
 several post-processing are given.
+These use as input either the trajectory file ('traj_t_x_y_vx_vy.txt') or the 'speed.txt' file
 
 ---------------------------------------------------------------------
+
+EXAMPLES:
+example file are given that reproduce the simulation in the article
+simply rename the desired example 'default_data_EXAMPLE_xxx.txt' into 'default.txt' and launch the code
+
+Beware: all files are overwritten (except 'simulation' which is incremented). It is advised to create a separate directory for each calculation.
 
                               
