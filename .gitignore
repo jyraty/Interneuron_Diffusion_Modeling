@@ -372,3 +372,5 @@ FodyWeavers.xsd
 /traj_t_x_y_vx_vy.txt
 /V1.py
 /V1.pyproj
+*.mp4
+/speed.txt
