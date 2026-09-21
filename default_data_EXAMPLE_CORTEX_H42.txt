@@ -1,0 +1,82 @@
+#
+universe_dimension 528 463
+#
+timestep 0.01
+#
+movie 10 5000   
+#
+potential   0 0  const_force   0.0
+#
+MASK  Potential Lines_bkg_cortex_V11.png Power 20 12 3.0 
+MASK  Potential Lines_negative_cortex_V11.png Fermi 10.0 20.0 5.0
+MASK Affinity  Lines_positive_cortex_V11.png Fermi  0.020 12 4.0
+MASK Affinity  Lines_negative_cortex_V11.png Fermi  -0.2  9 2.0
+MASK Affinity Full_black.png  Multiline_Cortex_Halfsize
+#
+walls 0 4
+#
+#
+#  NEURONS   gives the total number of neurons in the universe
+n_neurons 320
+# make the appear 1 every 5000 steps
+batches 1 5000
+#Neuron_data : generation zone and basic data for 3-points unit
+neuron_data  rectangle 40 175 35 50   3 180
+mass 3.0   1    0.0035      0.4  110      0.5   
+mass 3.0   0    0.000       1.0    1      2
+mass 5.0   1    0.0035      0.4  110    0.5
+nk2 2
+1 2 4 3.0    j1 j2 l0 k2
+2 3 4 3.0   
+nk3   1
+1 2 3  180 7
+#
+#Neighbours lists
+neighbours 1000  40.0
+# varieous fields profiles
+friction  linear 1.0 1.0
+#
+jumprate linear 1.0 1.0
+#
+tailrate linear 1.0 1.0
+#
+branchrate linear 1.0 1.0
+#
+# more important slipstick field
+#
+#            type         pause   nrjump_size  nr width sigma h(y=0) h(y=ny) l(y=0) l(y=ny)  
+slipstick trenches_grad     18000    2          1  4000.0 0.1 0.3 0.3 0.3 0.3 
+#
+jumpamp linear 1.0 1.0  
+#
+temperature 0.05
+#Periodic Boundary conditions
+PBC  0 
+#
+# jump acceptance based on affinity
+#   
+MCFIELD Affinity Positive
+#
+# TAIL_DATA level nmax, %l,    l0  k2,  k3    angstartmin, angstartmax, angle,    mass_max, createrate  deleterate  create_multfactor delete_multfcator
+tail_data   1     4     0.0   4.0  3.0  7.0     0.0        0.0           0.0     0.5     0.0002      0.0002    0.0 0.0  
+tail_data   2     4     0.0   4.0  3.0   7.0     45.0        70.0         0.0     0.5      0.01      0.005     0.0 0.0 
+tail_data   3     4     0.0   4.0  3   7.0    20.0        35.0          0.0     1.0      0.002      0.002    0.0 0.0 
+# Tail_branch_interaction  unused - leave defaults
+tail_branch_interaction    7.0  0.0  0.0 0.0
+#
+##Bulge_data   unused - leave default
+bulge_data     0.40     5         0.000 0.000 10.0
+#
+# Attraction/Repoulsion frac rep rwidth rcut 
+interaction_att   0.0   0.0 2.0  6.0
+#
+interaction_rep   1.0 6.0 5.0 15.0
+# Glial matter - not used leave default
+n_line_pert  0
+180.0         20     0.05     2    0.50          0.30          0.0
+# Line_pert_profile  half  1.0  0.0
+line_pert_profile  gradient_y  1.0  1.0
+##line_pert_profile  halftop  1.0  1.0
+n_glials  0  30   -25.0   3.0
+#Calculation o fdiffusion speed - only meaningful in BRAIN calculaytions
+SPEEDMEASURE  530 785    
