@@ -374,3 +374,12 @@ FodyWeavers.xsd
 /V1.pyproj
 *.mp4
 /speed.txt
+/affinitymask_400_189_-0.2_9.0_2.0.png
+/affinitymask_400_189_0.02_12.0_4.0.png
+/affinitymask_800_1200_-0.2_9.0_2.0.png
+/affinitymask_800_1200_0.02_12.0_4.0.png
+/default_data - Copie.txt
+/Lines_negative_brain_V11.pngmask_800_1200_10.0_20.0_5.0.png
+/Slice_affinity_limits_V11.pngmask_400_189_20.0_12.0_3.0.png
+/Slice_affinity_negative_V11.pngmask_400_189_10.0_20.0_5.0.png
+/Striatum_small.pngmask_800_1200_20.0_12.0_3.0.png
