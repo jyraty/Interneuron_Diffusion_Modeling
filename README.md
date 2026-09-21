@@ -1,5 +1,6 @@
 # V1
 --------------------------------------------------------------------------------------
+
 This python code performs simulation of interneurons in 2D.
 Interneurons are modelled as chains, eventually branched, of nodes connected by springs. So far level 2 and level 3 branches are implemented.
 Leading and tailing processes are allowed to perform random jumps. Jump acceptance probability obeys a Boltzmann-like distribution based on the local value of pre-defined 2D affinity fields and a 'temperature' value.
@@ -11,6 +12,7 @@ Parameters are provided as is. It is not advised to modify the proposed default 
 The code uses numba parallelism by default and is limited to 400 interneuron surrogates.
 Runing the codes requires the following libraries to be available in the python3 environment :
 numba, numpy, opencv, imageio.v2, pathlib, time, tkinter, matplotlib, threading
+
 ---------------------------------------------------------------------------------------
 
 Running the codes requires the presence of the following files in the runtime directory :
@@ -59,6 +61,7 @@ C) 'Field to plot' allows to toggle between the various fileds of the simulation
 ----------------------------------------------------------------------
 
 several post-processing are given.
+
 ---------------------------------------------------------------------
 
                               
