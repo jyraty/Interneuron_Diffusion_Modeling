@@ -361,3 +361,14 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/branches.txt
+/diffusion_tot.txt
+/diffusion_x.txt
+/diffusion_y.txt
+/Lines_bkg_cortex_V11.pngmask_528_463_20.0_12.0_3.0.png
+/Lines_negative_cortex_V11.pngmask_528_463_10.0_20.0_5.0.png
+/traj_file_x.txt
+/traj_file_y.txt
+/traj_t_x_y_vx_vy.txt
+/V1.py
+/V1.pyproj

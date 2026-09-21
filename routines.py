@@ -529,7 +529,7 @@ def update_trajectories(n_neurons: int, tx, ty, itime, timestep, neurons_x, neur
             vy[i] = (neurons_y[i, 0, 1]-neurons_yprev[i, 0, 1])/( ty.traj[index, 1]- ty.traj[index-1, 1])
 
     if (index == 0):
-
+        '''
         with open('traj_file_x.txt', 'w') as trajx_file:
             
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
@@ -539,6 +539,7 @@ def update_trajectories(n_neurons: int, tx, ty, itime, timestep, neurons_x, neur
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
                 "\t".join(f"{val:.3f}" for val in vecy) + "\n"
             trajy_file.write(ligne)
+        '''
         with open('traj_t_x_y_vx_vy.txt', 'w') as traj_file:
             for i in range(n_neurons):
                 nb = neurons_nbranches[i]
@@ -547,7 +548,7 @@ def update_trajectories(n_neurons: int, tx, ty, itime, timestep, neurons_x, neur
                 traj_file.write(ligne)
     else:
        
-        
+        '''
         with open('traj_file_x.txt', 'a') as trajx_file:
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
                 "\t".join(f"{val:.3f}" for val in vecx) + "\n"
@@ -556,6 +557,7 @@ def update_trajectories(n_neurons: int, tx, ty, itime, timestep, neurons_x, neur
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
                 "\t".join(f"{val:.3f}" for val in vecy) + "\n"
             trajy_file.write(ligne)
+        '''
         with open('traj_t_x_y_vx_vy.txt', 'a') as traj_file:
             for i in range(n_neurons):
                 nb = neurons_nbranches[i]/( tx.traj[index, 0]- tx.traj[index-1, 0])
@@ -623,6 +625,7 @@ def update_diffusion(n_neurons: int, diffx, diffy, difftot, itime, timestep,
            
 
             ligne =  f"{itime:12d} {itime*timestep:3f} {diffy.traj[index,0]:11.5f} \n"
+        '''
         with open('diffusion_x.txt', 'w') as diffx_file:
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
                 "\t".join(f"{val:09.3f}" for val in dx) + "\n"
@@ -633,6 +636,7 @@ def update_diffusion(n_neurons: int, diffx, diffy, difftot, itime, timestep,
         with open('diffusion_tot.txt', 'w') as difftot_file:
             ligne = f"{itime:12d} {itime*timestep:3f} {difftot.traj[index,0]:11.5f} \n"
             difftot_file.write(ligne)
+        '''
     else:
         
         for i in range(n_neurons):
@@ -674,7 +678,7 @@ def update_diffusion(n_neurons: int, diffx, diffy, difftot, itime, timestep,
                             speedhist_file.write(ligne)
 
 
-        
+        '''
         with open('diffusion_x.txt', 'a') as diffx_file:
             ligne = f"{itime:12d} {itime*timestep:3f}\t" + \
                 "\t".join(f"{val:09.3f}" for val in dx) + "\n"
@@ -685,6 +689,7 @@ def update_diffusion(n_neurons: int, diffx, diffy, difftot, itime, timestep,
         with open('diffusion_tot.txt', 'a') as difftot_file:
             ligne = f"{itime:12d} {itime*timestep:3f} {difftot.traj[index,0]:11.3f} \n"
             difftot_file.write(ligne)
+        '''
     diffx.index += 1
     diffy.index += 1
     difftot.index += 1
